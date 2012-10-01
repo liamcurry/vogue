@@ -1,16 +1,21 @@
 {
   "name": "vogue",
   "description": "Auto-reload stylesheets in web browser whenever the CSS files are saved.",
+  "keywords": [ "css", "client", "frontend", "sass", "compass", "stylus" ],
   "version": "0.4.4",
-  "homepage": "http://github.com/andrewdavey/vogue",
-  "repository": "http://github.com/andrewdavey/vogue.git",
+  "homepage": "http://github.com/liamcurry/vogue",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/liamcurry/vogue.git"
+  },
   "author": "Andrew Davey <andrew@equin.co.uk> (http://aboutcode.net/)",
-  "directories": {
-    "lib": ""
-  },
-  "engines": {
-    "node": "*"
-  },
+  "contributors": [
+    {
+      "name": "Liam Curry",
+      "email": "liam@curry.name"
+    }
+  ],
+  "preferGlobal": "true",
   "bin": {
     "vogue": "./vogue.js"
   },
