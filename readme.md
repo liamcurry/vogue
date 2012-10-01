@@ -1,19 +1,25 @@
+This fork does some minor cleanup and fixes.
+
+Install using the following command:
+
+    npm install -g https://github.com/liamcurry/vogue/tarball/master
+
 # Vogue
 
-Vogue creates a real-time link between your web browser and your file system. When you save 
-a CSS file, used by the HTML page in your browser, Vogue will make the browser reload the 
+Vogue creates a real-time link between your web browser and your file system. When you save
+a CSS file, used by the HTML page in your browser, Vogue will make the browser reload the
 stylesheet. Only the stylesheet is reloaded, not the entire page, making it work
 even for very dynamic/ajax pages.
 
-Vogue is all javascript. It runs a server on [Node.js](http://nodejs.org/), 
-which will watch the file system. 
-The server accepts WebSocket connections from the client code 
+Vogue is all javascript. It runs a server on [Node.js](http://nodejs.org/),
+which will watch the file system.
+The server accepts WebSocket connections from the client code
 (which uses [socket.io](http://socket.io/)).
 The client javascript can be loaded into a HTML page using a single script tag.
 
 ## Install using npm
-Make sure you have Node.JS and [npm](http://npmjs.org/) installed.  
-Then run: 
+Make sure you have Node.JS and [npm](http://npmjs.org/) installed.
+Then run:
 
     npm install vogue -g
 
@@ -25,7 +31,7 @@ Run the Vogue server.
 `--port` : The port used for Vogue's HTTP server. Optional, defaults to 8001.
 
 `--rewrite` : A rule in the form of "regexp:replacement" (e.g. "v[0-9]/(.*)$:files/\$1" ) to rewrite urls to filesystem paths.
- Submatches such as $1 will probably need to entered in your shell as \$1 to escape the $. 
+ Submatches such as $1 will probably need to entered in your shell as \$1 to escape the $.
 
 Open http://localhost:8001/ to see instructions for loading the Vogue client into your
 web pages.
@@ -33,19 +39,19 @@ web pages.
 ## Demo
 Vogue runs a separate HTTP server to the one running your website.
 To run the demo website, for example, do something like this first:
-  
-    cd demo  
+
+    cd demo
     python -m SimpleHTTPServer
 
 Then, from another terminal session, run Vogue:
 
     vogue demo
 
-Open http://localhost:8000 (or whatever the port used by your web server is) 
+Open http://localhost:8000 (or whatever the port used by your web server is)
 to view the demo index page. The demo page has the Vogue client javascript already included.
 So it will connect to the Vogue server and be watching the two CSS files used by the page.
 
-Try editing the CSS files in the `demo/styles` directory. Whenever you save, you will see the 
+Try editing the CSS files in the `demo/styles` directory. Whenever you save, you will see the
 browser update the reflect the changes made. This is done without reloading the entire page.
 
 Copyright &copy; 2011 Andrew Davey (andrew@equin.co.uk)
