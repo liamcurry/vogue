@@ -7,12 +7,12 @@ function Watcher(webDirectory, rewrite) {
   this.webDirectory = webDirectory;
   // array of VogueClient objects
   this.clients = [];
-  
-  // filename -> number_of_clients_watching 
+
+  // filename -> number_of_clients_watching
   this.fileWatcherCount = {};
 
   if (rewrite) {
-    this.rewriteUrlToPath = createRewriter(rewrite); 
+    this.rewriteUrlToPath = createRewriter(rewrite);
   }
 
   function createRewriter(rewrite) {
@@ -20,7 +20,7 @@ function Watcher(webDirectory, rewrite) {
     if (parts.length === 2) {
       var regex = new RegExp(parts[0]);
       var replacement = parts[1];
-      return function (str) { 
+      return function (str) {
         return str.replace(regex, replacement);
       }
     } else {

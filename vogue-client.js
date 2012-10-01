@@ -23,7 +23,7 @@ VogueClient.prototype.watchFile = function(href) {
       console.log('Could not read stats for ' + filename);
       return;
     }
-    
+
     this.watchedFiles[filename] = {
       href: href,
       mtime: stats.mtime

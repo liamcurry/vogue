@@ -2,8 +2,8 @@
 /* vogue.js
  * A tool for web developers. Vogue watches for changes to CSS files and
  * informs the web browser using them to reload those stylesheets.
- * 
- * Created by Andrew Davey ~ http://aboutcode.net 
+ *
+ * Created by Andrew Davey ~ http://aboutcode.net
  *
  * Vogue runs on nodeJS and uses socket.io for real-time communication between
  * browser and server.
@@ -16,8 +16,8 @@ var http = require('http')
   , opt  = require('parseopt')
   , io   = require('socket.io');
 
-var VogueClient = require('./VogueClient').VogueClient
-  , Watcher     = require('./Watcher').Watcher;
+var VogueClient = require('./vogue-client').VogueClient
+  , Watcher     = require('./watcher').Watcher;
 
 var options = getOptions()
   , server  = http.createServer(handleHttpRequest)
